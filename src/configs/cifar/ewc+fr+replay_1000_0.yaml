@@ -1,0 +1,41 @@
+arch: CifarNet
+arch_args:
+  d_in: 3
+  d_out: 60
+batch_mode: null
+batch_size: 256
+choose_m2_as_subset_of_m1: true
+dataset: CIFAR
+dataset_root: ./src/data
+download: true
+end_task_id: 6
+epochs: 0
+lam: 2.0
+max_grad_norm: 100
+memory_args:
+  n_memorable_points: 1000
+  temp: 2.0
+n_classes: 60
+n_tasks: 6
+optim: Adam
+optim_args:
+  betas:
+  - 0.9
+  - 0.999
+  lr: 0.001
+  weight_decay: 0.0
+result_root: ./src/results
+run_id: ewc+fr+replay_1000_0
+save_load_best_val_checkpoint: false
+scale_tau_by_task_size: false
+seed: 0
+starting_checkpoint_run_id: batch-joint_0
+starting_task_id: 2
+tau: 0.25
+tau2: 0.25
+test_batch_size: 256
+use_ewc_weight_regularizer: true
+use_experience_replay: true
+use_func_regularizer: true
+val_data_frac: 0.0
+weight_init_mode: continual

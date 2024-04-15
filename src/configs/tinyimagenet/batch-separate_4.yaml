@@ -1,0 +1,36 @@
+arch: VGGModel
+arch_args:
+  d_in: 3
+  d_out: 200
+batch_mode: separate
+batch_size: 200
+dataset: TinyImageNet
+dataset_root: ./src/data
+download: true
+early_stopping_patience: 10
+end_task_id: 10
+epochs: 0
+lr_decay_grace_period: 10
+lr_decay_patience: 5
+memory_args:
+  n_memorable_points: null
+n_classes: 200
+n_tasks: 10
+optim: SGD
+optim_args:
+  lr: 0.01
+  momentum: 0.9
+  weight_decay: 0.0
+result_root: ./src/results
+run_id: batch-separate_4
+save_load_best_val_checkpoint: true
+scale_tau_by_task_size: true
+seed: 4
+starting_checkpoint_run_id: batch-joint
+starting_task_id: 1
+test_batch_size: 200
+use_ewc_weight_regularizer: false
+use_experience_replay: false
+use_func_regularizer: false
+use_lr_decay_with_early_stopping: true
+weight_init_mode: random

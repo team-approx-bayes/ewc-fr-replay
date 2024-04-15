@@ -1,0 +1,7 @@
+torch
+torchvision
+tueplots==0.0.11
+pyyaml
+matplotlib
+tqdm
+laplace-torch

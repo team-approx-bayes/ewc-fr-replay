@@ -1,0 +1,40 @@
+arch: ResNet18
+arch_args:
+  num_classes: 1000
+batch_mode: null
+batch_size: 1024
+dataset: ImageNet
+dataset_root: ./src/data
+download: true
+end_task_id: 10
+epochs: 40
+label_smoothing: 0.0
+lam: 1.0
+max_grad_norm: null
+memory_args:
+  n_memorable_points: null
+n_classes: 1000
+n_tasks: 10
+optim: SGD
+optim_args:
+  lr: 0.5
+  lr_peak_epoch: 2
+  lr_schedule_type: cyclic
+  momentum: 0.9
+  weight_decay: 5.0e-05
+result_root: ./src/results
+run_id: ewc_0
+save_load_best_val_checkpoint: false
+scale_tau_by_task_size: true
+seed: 0
+shuffle_classes: true
+shuffle_classes_seed: 1993
+starting_checkpoint_run_id: batch-joint_0
+starting_task_id: 2
+test_batch_size: 512
+use_amp: true
+use_ewc_weight_regularizer: true
+use_experience_replay: false
+use_func_regularizer: false
+val_data_frac: 0.0
+weight_init_mode: continual
